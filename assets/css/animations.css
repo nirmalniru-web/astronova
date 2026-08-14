@@ -1,0 +1,260 @@
+/* ==========================================================================
+   SMART CROP DOCTOR — CINEMATIC ANIMATIONS & MOTION
+   ========================================================================== */
+
+/* ----------------------------------------
+   1. Page & Container Transitions
+   ---------------------------------------- */
+.view-container {
+  animation: pageEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ----------------------------------------
+   2. Floating Leaf Canvas Background
+   ---------------------------------------- */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* ----------------------------------------
+   3. AI Laser Scanner & Radar Overlay
+   ---------------------------------------- */
+.scanner-viewport {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 380px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 2px solid var(--border-glow);
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.25);
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Laser Scan Line */
+.scanner-laser-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent 0%, #34D399 30%, #FFFFFF 50%, #34D399 70%, transparent 100%);
+  box-shadow: 0 0 20px #10B981, 0 0 35px #34D399;
+  z-index: 10;
+  animation: scanLaser 2.2s infinite ease-in-out;
+}
+
+@keyframes scanLaser {
+  0% {
+    top: 0%;
+    opacity: 0.2;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 98%;
+    opacity: 0.2;
+  }
+}
+
+/* Scanning Grid Mesh */
+.scanner-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Radar Target Reticle */
+.scanner-reticle {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border: 2px dashed rgba(52, 211, 153, 0.6);
+  border-radius: 50%;
+  z-index: 8;
+  animation: rotateReticle 8s linear infinite;
+}
+
+.scanner-reticle::before {
+  content: '';
+  position: absolute;
+  inset: -15px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 50%;
+}
+
+.scanner-reticle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #34D399;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 12px #34D399;
+  animation: pulseDot 1.2s infinite alternate;
+}
+
+@keyframes rotateReticle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseDot {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.4); opacity: 1; }
+}
+
+/* Corner Bracket Accents */
+.scanner-corner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: #34D399;
+  border-style: solid;
+  z-index: 9;
+}
+.corner-tl { top: 12px; left: 12px; border-width: 3px 0 0 3px; }
+.corner-tr { top: 12px; right: 12px; border-width: 3px 3px 0 0; }
+.corner-bl { bottom: 12px; left: 12px; border-width: 0 0 3px 3px; }
+.corner-br { bottom: 12px; right: 12px; border-width: 0 3px 3px 0; }
+
+/* ----------------------------------------
+   4. Bounding Box & Symptom Hotspots
+   ---------------------------------------- */
+.symptom-bbox {
+  position: absolute;
+  border: 2px solid #F59E0B;
+  background: rgba(245, 158, 11, 0.18);
+  border-radius: 6px;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
+  z-index: 12;
+  animation: pulseBox 2s infinite alternate ease-in-out;
+}
+
+.symptom-bbox-tag {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  background: #F59E0B;
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+@keyframes pulseBox {
+  0% { box-shadow: 0 0 8px rgba(245, 158, 11, 0.3); }
+  100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.8); }
+}
+
+/* ----------------------------------------
+   5. Hero Visual Scan Effect
+   ---------------------------------------- */
+.hero-scan-visual {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 16/10;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  border: 1px solid var(--border-glow);
+}
+
+.hero-scan-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+
+.hero-scan-visual:hover .hero-scan-img {
+  transform: scale(1.04);
+}
+
+.hero-badge-overlay {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  background: rgba(7, 21, 13, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ----------------------------------------
+   6. Subtle Shimmer & Pulse Utilities
+   ---------------------------------------- */
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.03) 100%);
+  background-size: 200% 100%;
+  animation: shimmerAnim 2.5s infinite;
+}
+
+@keyframes shimmerAnim {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.pulse-soft {
+  animation: pulseSoft 3s infinite ease-in-out;
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}

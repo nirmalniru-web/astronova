@@ -1,0 +1,93 @@
+/* ==========================================================================
+   SMART CROP DOCTOR — RESPONSIVE & MOBILE-FIRST OPTIMIZATION
+   ========================================================================== */
+
+/* Mobile Touch Target & Interaction Enhancements */
+@media (max-width: 767px) {
+  .btn {
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .lang-pills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .weather-temp-main {
+    justify-content: center;
+  }
+
+  .result-image-wrapper {
+    max-height: 240px;
+  }
+
+  .tts-player-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tts-player-card .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .lang-pills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .circular-gauge {
+    width: 140px;
+    height: 140px;
+  }
+
+  .gauge-score {
+    font-size: 2.1rem;
+  }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .landing-hero {
+    gap: 2rem;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Safe Area Insets for Modern Mobile Browsers */
+@supports (padding: max(0px)) {
+  .mobile-bottom-bar {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    padding-left: max(0.5rem, env(safe-area-inset-left));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
+  }
+}
+
+/* Print Optimization for Farmer Advisory Printing */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .top-navbar, .mobile-bottom-bar, #particles-canvas, .hero-cta-group, .btn, #toast-container {
+    display: none !important;
+  }
+  .glass-card {
+    border: 1px solid #CCC !important;
+    box-shadow: none !important;
+    background: #FFF !important;
+    color: #000 !important;
+  }
+  .recom-content h4, .recom-content p, .symptom-name {
+    color: #000 !important;
+  }
+}
