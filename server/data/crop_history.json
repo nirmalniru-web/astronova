@@ -1,0 +1,210 @@
+[
+  {
+    "scanId": "scan-1786692704799",
+    "crop": "Rice / Paddy",
+    "cropCode": "rice",
+    "diseaseName": "Rice Blast (Magnaporthe oryzae)",
+    "diseaseDisplay": "Possible Rice Blast",
+    "confidence": 94,
+    "severity": "high",
+    "severityScore": 85,
+    "status": "needs_attention",
+    "image": "assets/images/rice-blast.jpg",
+    "date": "Aug 14, 2026",
+    "timestamp": 1786692704802,
+    "fieldLocation": "Active Farm Plot",
+    "symptoms": [
+      {
+        "id": "spindle",
+        "name": "Spindle-shaped Spots",
+        "desc": "Diamond/eye-shaped lesions with ash-grey center and brown borders.",
+        "icon": "🔶"
+      },
+      {
+        "id": "burn",
+        "name": "Leaf Desiccation",
+        "desc": "Lesions merge together, causing leaf blades to look scorched.",
+        "icon": "🔥"
+      }
+    ],
+    "recommendations": [
+      {
+        "step": 1,
+        "title": "Regulate Excess Nitrogen",
+        "desc": "Immediately stop top-dressing urea fertilizers which make plant tissues tender."
+      },
+      {
+        "step": 2,
+        "title": "Maintain Standing Water",
+        "desc": "Maintain 2–3 cm standing water in paddy to reduce spore germination."
+      },
+      {
+        "step": 3,
+        "title": "Spray Targeted Fungicide",
+        "desc": "Spray Tricyclazole 75% WP during calm morning hours."
+      }
+    ],
+    "weather": {
+      "temp": 28,
+      "humidity": 75,
+      "condition": "Favorable"
+    },
+    "advisory": {
+      "alertTitle": "Advisory Saved",
+      "sprayAction": "Follow standard application protocol"
+    },
+    "disclaimer": "AI-assisted preliminary diagnostic record."
+  },
+  {
+    "scanId": "scan-1786692633193",
+    "crop": "Rice / Paddy",
+    "cropCode": "rice",
+    "diseaseName": "Rice Blast (Magnaporthe oryzae)",
+    "diseaseDisplay": "Possible Rice Blast",
+    "confidence": 94,
+    "severity": "high",
+    "severityScore": 85,
+    "status": "needs_attention",
+    "image": "assets/images/rice-blast.jpg",
+    "date": "Aug 14, 2026",
+    "timestamp": 1786692633204,
+    "fieldLocation": "Active Farm Plot",
+    "symptoms": [
+      {
+        "id": "spindle",
+        "name": "Spindle-shaped Spots",
+        "desc": "Diamond/eye-shaped lesions with ash-grey center and brown borders.",
+        "icon": "🔶"
+      },
+      {
+        "id": "burn",
+        "name": "Leaf Desiccation",
+        "desc": "Lesions merge together, causing leaf blades to look scorched.",
+        "icon": "🔥"
+      }
+    ],
+    "recommendations": [
+      {
+        "step": 1,
+        "title": "Regulate Excess Nitrogen",
+        "desc": "Immediately stop top-dressing urea fertilizers which make plant tissues tender."
+      },
+      {
+        "step": 2,
+        "title": "Maintain Standing Water",
+        "desc": "Maintain 2–3 cm standing water in paddy to reduce spore germination."
+      },
+      {
+        "step": 3,
+        "title": "Spray Targeted Fungicide",
+        "desc": "Spray Tricyclazole 75% WP during calm morning hours."
+      }
+    ],
+    "weather": {
+      "temp": 28,
+      "humidity": 75,
+      "condition": "Favorable"
+    },
+    "advisory": {
+      "alertTitle": "Advisory Saved",
+      "sprayAction": "Follow standard application protocol"
+    },
+    "disclaimer": "AI-assisted preliminary diagnostic record."
+  },
+  {
+    "scanId": "hist-001",
+    "crop": "Tomato",
+    "cropCode": "tomato",
+    "diseaseName": "Early Blight (Alternaria solani)",
+    "diseaseDisplay": "Possible Early Blight",
+    "confidence": 92,
+    "severity": "moderate",
+    "severityScore": 65,
+    "status": "needs_attention",
+    "image": "assets/images/tomato-blight.jpg",
+    "date": "Aug 14, 2026",
+    "timestamp": 1786685176078,
+    "fieldLocation": "Plot A (North Ridge)",
+    "weather": {
+      "temp": 27,
+      "humidity": 86,
+      "condition": "Humid Spells"
+    },
+    "advisory": {
+      "alertTitle": "🌧️ Rain Alert — Postpone Foliar Spraying",
+      "sprayAction": "Hold foliar spraying today. Safe window: Saturday morning."
+    }
+  },
+  {
+    "scanId": "hist-002",
+    "crop": "Rice / Paddy",
+    "cropCode": "rice",
+    "diseaseName": "Healthy Crop (No Disease Detected)",
+    "diseaseDisplay": "Healthy Plant",
+    "confidence": 98,
+    "severity": "low",
+    "severityScore": 98,
+    "status": "healthy",
+    "image": "assets/images/hero-crop.jpg",
+    "date": "Aug 11, 2026",
+    "timestamp": 1786433176078,
+    "fieldLocation": "Plot B (Wetland)",
+    "weather": {
+      "temp": 28,
+      "humidity": 65,
+      "condition": "Mainly Clear"
+    },
+    "advisory": {
+      "alertTitle": "🌱 Optimal Growth Conditions",
+      "sprayAction": "No corrective spray required. Continue routine care."
+    }
+  },
+  {
+    "scanId": "hist-003",
+    "crop": "Chilli",
+    "cropCode": "chilli",
+    "diseaseName": "Healthy Crop",
+    "diseaseDisplay": "Healthy Plant",
+    "confidence": 94,
+    "severity": "low",
+    "severityScore": 92,
+    "status": "healthy",
+    "image": "assets/images/hero-crop.jpg",
+    "date": "Aug 08, 2026",
+    "timestamp": 1786173976078,
+    "fieldLocation": "Greenhouse Polyhouse",
+    "weather": {
+      "temp": 30,
+      "humidity": 60,
+      "condition": "Sunny"
+    },
+    "advisory": {
+      "alertTitle": "🌱 Healthy Vegetative Phase",
+      "sprayAction": "Maintain regular drip irrigation."
+    }
+  },
+  {
+    "scanId": "hist-004",
+    "crop": "Tomato",
+    "cropCode": "tomato",
+    "diseaseName": "Mild Leaf Spot",
+    "diseaseDisplay": "Possible Septoria Leaf Spot",
+    "confidence": 86,
+    "severity": "moderate",
+    "severityScore": 70,
+    "status": "needs_attention",
+    "image": "assets/images/tomato-blight.jpg",
+    "date": "Aug 02, 2026",
+    "timestamp": 1785655576078,
+    "fieldLocation": "Plot A (North Ridge)",
+    "weather": {
+      "temp": 26,
+      "humidity": 82,
+      "condition": "Drizzle"
+    },
+    "advisory": {
+      "alertTitle": "⚠️ Moisture Spore Alert",
+      "sprayAction": "Apply preventive copper fungicide spray."
+    }
+  }
+]
