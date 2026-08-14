@@ -1,0 +1,26 @@
+{
+  "name": "smart-crop-doctor",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Protect Every Crop. Grow With Confidence. — AI-powered agricultural health platform for Indian farmers.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "keywords": [
+    "agriculture",
+    "crop-health",
+    "ai-detection",
+    "farmers",
+    "hackathon"
+  ],
+  "author": "Smart Crop Doctor Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "multer": "^2.2.0"
+  }
+}

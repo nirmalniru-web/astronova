@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  
+  <!-- SEO Best Practices -->
+  <title>Smart Crop Doctor — Protect Every Crop. Grow With Confidence.</title>
+  <meta name="description" content="AI-powered crop health platform helping Indian farmers identify crop diseases early from leaf photos and receive actionable, farmer-friendly agricultural guidance in 8 regional languages." />
+  <meta name="keywords" content="crop doctor, plant disease detection, agricultural AI, Indian farmers, crop health, tomato blight, rice blast, crop advisory, Krishi Vigyan" />
+  <meta name="theme-color" content="#07150D" />
+  
+  <!-- Favicon (SVG Leaf) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;700&family=Noto+Sans+Kannada:wght@400;500;700&family=Noto+Sans+Telugu:wght@400;500;700&family=Noto+Sans+Tamil:wght@400;500;700&family=Noto+Sans+Malayalam:wght@400;500;700&family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/components.css" />
+  <link rel="stylesheet" href="./assets/css/animations.css" />
+  <link rel="stylesheet" href="./assets/css/pages.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+</head>
+<body>
+  
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content-mount" class="skip-to-content">Skip to Main Content</a>
+
+  <!-- Floating Cinematic Leaf Particles Canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <div id="app">
+    <!-- Navbar Mount Point -->
+    <div id="navbar-mount"></div>
+
+    <!-- Main View Mount Point -->
+    <main id="main-content-mount" class="main-content" role="main"></main>
+
+    <!-- Mobile Bottom Navigation Mount Point -->
+    <div id="mobile-bottom-mount"></div>
+  </div>
+
+  <!-- Global Toast Notification Container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Application Coordinator (ES Module) -->
+  <script type="module" src="./src/app.js"></script>
+
+</body>
+</html>
